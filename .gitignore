@@ -1,0 +1,2 @@
+# Ignore the file user_sheets_api.dart in the lib/api directory.
+lib/api/user_sheets_api.dart
