@@ -18,6 +18,7 @@ class HomeContentMobile extends StatefulWidget {
   State<HomeContentMobile> createState() => _HomeContentMobileState();
 }
 
+//updates
 class _HomeContentMobileState extends State<HomeContentMobile> {
   final introKey = GlobalKey();
   final experienceKey = GlobalKey();
