@@ -2,11 +2,9 @@ import 'dart:html';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'dart:io';
 
 class IntroWidgetMobile extends StatelessWidget {
   const IntroWidgetMobile({super.key});

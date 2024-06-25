@@ -4,7 +4,6 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_bounceable/flutter_bounceable.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:unique_portfolio/widgets/circle_avatar.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
 class ExperienceWidgetMobile extends StatefulWidget {

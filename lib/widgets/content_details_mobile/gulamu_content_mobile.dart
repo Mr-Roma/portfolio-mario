@@ -1,13 +1,11 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bounceable/flutter_bounceable.dart';
-import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:flick_video_player/flick_video_player.dart';
-
 import 'package:unique_portfolio/widgets/centered_view/centered_view.dart';
-import 'package:video_player/video_player.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class GulamuContentMobile extends StatefulWidget {
   const GulamuContentMobile({super.key});
@@ -17,15 +15,6 @@ class GulamuContentMobile extends StatefulWidget {
 }
 
 class _GulamuContentMobileState extends State<GulamuContentMobile> {
-  late FlickManager flickManager;
-  @override
-  void initState() {
-    super.initState();
-    flickManager = FlickManager(
-        videoPlayerController: VideoPlayerController.networkUrl(Uri.parse(
-            "https://www.facebook.com/share/v/Dhbq8GdmcEHQpLHZ/?mibextid=WC7FNe")));
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -264,11 +253,16 @@ class _GulamuContentMobileState extends State<GulamuContentMobile> {
                 ),
                 StartText(title: "4. Video Documentation"),
                 SizedBox(
-                  height: 20,
+                  height: 50,
                 ),
-                Container(
-                  child: FlickVideoPlayer(flickManager: flickManager),
-                )
+                LinkText(
+                  title: 'Video Documentation',
+                  url:
+                      'https://www.facebook.com/share/v/Dhbq8GdmcEHQpLHZ/?mibextid=WC7FNe',
+                ),
+                SizedBox(
+                  height: 50,
+                ),
               ],
             ),
           ),
@@ -318,6 +312,49 @@ class _TextTityle extends StatelessWidget {
         ),
         Text(description),
       ],
+    );
+  }
+}
+
+class LinkText extends StatefulWidget {
+  final String title;
+  final String url;
+
+  const LinkText({
+    Key? key,
+    required this.title,
+    required this.url,
+  }) : super(key: key);
+
+  @override
+  _LinkTextState createState() => _LinkTextState();
+}
+
+class _LinkTextState extends State<LinkText> {
+  bool _isHovered = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return MouseRegion(
+      cursor: SystemMouseCursors.click,
+      onHover: (event) => setState(() => _isHovered = true),
+      onExit: (event) => setState(() => _isHovered = false),
+      child: GestureDetector(
+        onTap: () async {
+          if (await canLaunch(widget.url)) {
+            await launch(widget.url);
+          } else {
+            throw 'Could not launch ${widget.url}';
+          }
+        },
+        child: Text(
+          widget.title,
+          style: TextStyle(
+            color: _isHovered ? Colors.blue : Colors.blue,
+            decoration: TextDecoration.underline,
+          ),
+        ),
+      ),
     );
   }
 }
