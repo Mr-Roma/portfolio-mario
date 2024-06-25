@@ -1,9 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_bounceable/flutter_bounceable.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:unique_portfolio/widgets/heart_animation.dart';
 
 class SkillWidgetMobile extends StatelessWidget {
   const SkillWidgetMobile({super.key});
@@ -35,36 +33,7 @@ class SkillWidgetMobile extends StatelessWidget {
         Bounceable(
           onTap: () {},
           child: Animate(
-            child: Stack(
-              children: [
-                Image.asset('assets/images/mobile_skils.png'),
-                Positioned(
-                  top: 245,
-                  left: 25,
-                  child: HeartAnimation(),
-                ),
-                Positioned(
-                  top: 442,
-                  left: 25,
-                  child: HeartAnimation(),
-                ),
-                Positioned(
-                  top: 662,
-                  left: 25,
-                  child: HeartAnimation(),
-                ),
-                Positioned(
-                  top: 662,
-                  left: 220,
-                  child: HeartAnimation(),
-                ),
-                Positioned(
-                  top: 858,
-                  left: 220,
-                  child: HeartAnimation(),
-                ),
-              ],
-            ),
+            child: Image.asset('assets/images/mobile_skils.png'),
           ),
         ),
       ],
