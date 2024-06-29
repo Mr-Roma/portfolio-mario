@@ -1,15 +1,3 @@
-2024/06/26-17:29:30.926 21a4 Reusing MANIFEST C:\Users\Romario\AppData\Local\Temp\flutter_tools.53750189\flutter_tools_chrome_device.245fdd1\Default\shared_proto_db/MANIFEST-000001
-2024/06/26-17:29:30.926 21a4 Recovering log #42
-2024/06/26-17:29:30.928 21a4 Reusing old log C:\Users\Romario\AppData\Local\Temp\flutter_tools.53750189\flutter_tools_chrome_device.245fdd1\Default\shared_proto_db/000042.log 
-2024/06/26-17:32:33.364 3ecc Level-0 table #46: started
-2024/06/26-17:32:33.366 3ecc Level-0 table #46: 136870 bytes OK
-2024/06/26-17:32:33.367 3ecc Delete type=0 #42
-2024/06/26-17:32:33.367 3ecc Compacting 4@0 + 1@1 files
-2024/06/26-17:32:33.372 3ecc Generated table #47@0: 2514 keys, 316614 bytes
-2024/06/26-17:32:33.372 3ecc Compacted 4@0 + 1@1 files => 316614 bytes
-2024/06/26-17:32:33.372 3ecc compacted to: files[ 0 1 1 0 0 0 0 ]
-2024/06/26-17:32:33.372 3ecc Delete type=2 #34
-2024/06/26-17:32:33.372 3ecc Delete type=2 #37
-2024/06/26-17:32:33.372 3ecc Delete type=2 #40
-2024/06/26-17:32:33.372 3ecc Delete type=2 #43
-2024/06/26-17:32:33.372 3ecc Delete type=2 #46
+2024/06/30-05:27:40.533 8b4 Reusing MANIFEST C:\Users\Romario\AppData\Local\Temp\flutter_tools.1373fd63\flutter_tools_chrome_device.8d3dbbd0\Default\shared_proto_db/MANIFEST-000001
+2024/06/30-05:27:40.533 8b4 Recovering log #45
+2024/06/30-05:27:40.534 8b4 Reusing old log C:\Users\Romario\AppData\Local\Temp\flutter_tools.1373fd63\flutter_tools_chrome_device.8d3dbbd0\Default\shared_proto_db/000045.log 
