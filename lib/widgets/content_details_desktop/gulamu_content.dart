@@ -4,6 +4,7 @@ import 'package:flutter_bounceable/flutter_bounceable.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'package:unique_portfolio/widgets/centered_view/centered_view.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class GulamuContent extends StatelessWidget {
   const GulamuContent({super.key});
@@ -115,7 +116,7 @@ class GulamuContent extends StatelessWidget {
                           height: 5,
                         ),
                         Text(
-                          'What is Histel?',
+                          'What is Gulamu?',
                         ),
                         SizedBox(
                           height: 5,
@@ -133,28 +134,25 @@ class GulamuContent extends StatelessWidget {
                           height: 5,
                         ),
                         Text(
-                          '1. Design the App',
+                          '1. Slicing the App',
                         ),
                         SizedBox(
                           height: 5,
                         ),
                         Text(
-                          '2. Slicing',
+                          '2. Functionalities Integration',
                         ),
                         SizedBox(
                           height: 5,
                         ),
                         Text(
-                          '3. Functionalisties Integration',
+                          '3. Documentation Code',
                         ),
                         SizedBox(
                           height: 5,
                         ),
                         Text(
-                          '4. Set Up Monitoring',
-                        ),
-                        Text(
-                          '4. Set Up Monitoring',
+                          '4. Video Documentation',
                         ),
                       ],
                     ),
@@ -168,11 +166,11 @@ class GulamuContent extends StatelessWidget {
                   height: 20,
                 ),
                 Text(
-                    'Histel App is a mobile application project that offers various unique learning features about the history experienced by Timor-Leste.'),
+                    'Gulamu is a mobile application that help the users to track their sugar consumption in real time.'),
                 SizedBox(
                   height: 20,
                 ),
-                StartText(title: 'What is Histel?'),
+                StartText(title: 'What is Gulamu?'),
                 SizedBox(
                   height: 20,
                 ),
@@ -184,7 +182,15 @@ class GulamuContent extends StatelessWidget {
                   height: 20,
                 ),
                 Text(
-                    "For those who don't know, the unique features in the Histel app consist of several important features, such as game feature, historical photo feature, chatbot feature, chat community, article feature, documentation feature, and several other important features."),
+                    "An application that can provide users' blood sugar consumption data:"),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("- Reducing Diabetes"),
+                    Text("- Patients reducing the risk of heart attacks"),
+                    Text("- Having a healthy body"),
+                  ],
+                ),
                 SizedBox(
                   height: 20,
                 ),
@@ -193,7 +199,7 @@ class GulamuContent extends StatelessWidget {
                   height: 20,
                 ),
                 Text(
-                    "When I saw that there was no online platform in Timor-Leste that could present the complete history of Timor-Leste, I saw this as a root problem that needed to be addressed using technology, specifically by creating a mobile-based application called Histel App."),
+                    "According to data from the Institute for Health Metrics and Evaluation: diabetes mellitus is one of the chronic diseases that is the third highest cause of death in Indonesia in 2019, around 57.42 deaths per 100,000 population. Excessive daily sugar consumption exceeds the recommended limit."),
                 SizedBox(
                   height: 20,
                 ),
@@ -202,7 +208,7 @@ class GulamuContent extends StatelessWidget {
                   height: 20,
                 ),
                 Text(
-                    "Basically, I am the person behind the creation of the Histel application, where I myself took on roles ranging from designing the application interface, being the developer who sliced and integrated the database and the application online"),
+                    "As a Team Lead and Developer, I have accomplished several important tasks, from leading the team to developing the Gulamu application itself. Here are the details of what I have done in this project:"),
                 SizedBox(
                   height: 20,
                 ),
@@ -241,7 +247,15 @@ class GulamuContent extends StatelessWidget {
                 ),
                 StartText(title: "4. Video Documentation"),
                 SizedBox(
-                  height: 20,
+                  height: 50,
+                ),
+                LinkText(
+                  title: 'Video Documentation',
+                  url:
+                      'https://www.facebook.com/share/v/Dhbq8GdmcEHQpLHZ/?mibextid=WC7FNe',
+                ),
+                SizedBox(
+                  height: 50,
                 ),
               ],
             ),
@@ -292,6 +306,49 @@ class _TextTityle extends StatelessWidget {
         ),
         Text(description),
       ],
+    );
+  }
+}
+
+class LinkText extends StatefulWidget {
+  final String title;
+  final String url;
+
+  const LinkText({
+    Key? key,
+    required this.title,
+    required this.url,
+  }) : super(key: key);
+
+  @override
+  _LinkTextState createState() => _LinkTextState();
+}
+
+class _LinkTextState extends State<LinkText> {
+  bool _isHovered = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return MouseRegion(
+      cursor: SystemMouseCursors.click,
+      onHover: (event) => setState(() => _isHovered = true),
+      onExit: (event) => setState(() => _isHovered = false),
+      child: GestureDetector(
+        onTap: () async {
+          if (await canLaunch(widget.url)) {
+            await launch(widget.url);
+          } else {
+            throw 'Could not launch ${widget.url}';
+          }
+        },
+        child: Text(
+          widget.title,
+          style: TextStyle(
+            color: _isHovered ? Colors.blue : Colors.blue,
+            decoration: TextDecoration.underline,
+          ),
+        ),
+      ),
     );
   }
 }

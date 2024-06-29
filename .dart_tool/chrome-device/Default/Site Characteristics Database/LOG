@@ -1,4 +1,4 @@
-2024/06/26-17:24:24.613 8774 Reusing MANIFEST C:\Users\Romario\AppData\Local\Temp\flutter_tools.8de3355d\flutter_tools_chrome_device.a7cbb7dd\Default\Site Characteristics Database/MANIFEST-000001
-2024/06/26-17:24:24.614 8774 Recovering log #3
-2024/06/26-17:24:24.614 8774 (ignoring error) C:\Users\Romario\AppData\Local\Temp\flutter_tools.8de3355d\flutter_tools_chrome_device.a7cbb7dd\Default\Site Characteristics Database/000003.log: dropping 79 bytes; Corruption: checksum mismatch
-2024/06/26-17:24:24.615 8774 Reusing old log C:\Users\Romario\AppData\Local\Temp\flutter_tools.8de3355d\flutter_tools_chrome_device.a7cbb7dd\Default\Site Characteristics Database/000003.log 
+2024/06/26-17:29:30.820 520c Reusing MANIFEST C:\Users\Romario\AppData\Local\Temp\flutter_tools.53750189\flutter_tools_chrome_device.245fdd1\Default\Site Characteristics Database/MANIFEST-000001
+2024/06/26-17:29:30.820 520c Recovering log #3
+2024/06/26-17:29:30.820 520c (ignoring error) C:\Users\Romario\AppData\Local\Temp\flutter_tools.53750189\flutter_tools_chrome_device.245fdd1\Default\Site Characteristics Database/000003.log: dropping 79 bytes; Corruption: checksum mismatch
+2024/06/26-17:29:30.821 520c Reusing old log C:\Users\Romario\AppData\Local\Temp\flutter_tools.53750189\flutter_tools_chrome_device.245fdd1\Default\Site Characteristics Database/000003.log 
